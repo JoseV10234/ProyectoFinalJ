@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesDeObjetos
 {
-    internal class Pregunta
+    public class Pregunta
     {
         public string enunciadoDeLaPregunta;
         public Respuesta[] respuestasDeLaPregunta;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClasesDeObjetos
 {
-    internal class Dificultad
+    public class Dificultad
     {
         public string nombreDeLaDificultad;
         public Pregunta[] preguntas;
