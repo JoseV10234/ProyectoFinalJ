@@ -28,14 +28,14 @@ namespace LogicaDeJuego
             bancoDePreguntas[3] = new Dificultad();
             bancoDePreguntas[4] = new Dificultad();
 
-            bancoDePreguntas[0].preguntas = new Pregunta[5];
+            bancoDePreguntas[0].preguntas = new Pregunta[20];
 
             bancoDePreguntas[0].preguntas[0] = new Pregunta();
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
+            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta = new Respuesta[3];
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[0] = new Respuesta();
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[1] = new Respuesta();
             bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[2] = new Respuesta();
-            bancoDePreguntas[0].preguntas[0].respuestasDeLaPregunta[3] = new Respuesta();
+            
 
             bancoDePreguntas[0].preguntas[1] = new Pregunta();
             bancoDePreguntas[0].preguntas[1].respuestasDeLaPregunta = new Respuesta[4];
@@ -64,6 +64,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[0].preguntas[4].respuestasDeLaPregunta[1] = new Respuesta();
             bancoDePreguntas[0].preguntas[4].respuestasDeLaPregunta[2] = new Respuesta();
             bancoDePreguntas[0].preguntas[4].respuestasDeLaPregunta[3] = new Respuesta();
+
 
             bancoDePreguntas[1].preguntas[0] = new Pregunta();
             bancoDePreguntas[1].preguntas[0].respuestasDeLaPregunta = new Respuesta[4];
@@ -210,7 +211,7 @@ namespace LogicaDeJuego
 
             nivelDeDificultad = 0;
             rng = new Random();
-            numeroDePregunta = rng.Next(0, 21); // CAMBIAR ESTO UNA VEZ TENGA TODAS LAS PREGUNTAS
+            numeroDePregunta = rng.Next(0, 5); // CAMBIAR ESTO UNA VEZ TENGA TODAS LAS PREGUNTAS
         }
         public void ProgresarJuego()
         {
@@ -241,9 +242,9 @@ namespace LogicaDeJuego
         }
 
 
-        // Método que me indica si el jugador acerto o falla la pregunta 
-        // Si acertó, el método devuelve el valor TRUE
-        // Caso contrario, devuelve false.
+        // booleano que me evalua la respuesta que el usuario selecciona
+        // Si la respuesta del usuario es igual a la respuesta correcta a como esta en el banco de preguntas, avanza
+        // de lo contrario, se debe de perder una vida.
         public bool EvaluarRespuesta()
         {
             if (respuestaDelUsuario == bancoDePreguntas[nivelDeDificultad].preguntas[numeroDePregunta].respuestaCorrecta)

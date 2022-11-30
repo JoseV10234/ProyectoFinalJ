@@ -54,6 +54,7 @@ namespace ProyectoFinal
 
             for (int b = 0; b < limite; b++)
             {
+                Console.WriteLine(juegoActual.ObtenerPregunta());
                 Console.WriteLine("0 - " + juegoActual.ObtenerRespuestasPosibles(0));
                 Console.WriteLine("1 - " + juegoActual.ObtenerRespuestasPosibles(1));
                 Console.WriteLine("2 - " + juegoActual.ObtenerRespuestasPosibles(2));
