@@ -8,7 +8,10 @@ namespace ClasesDeObjetos
 {
     public class Pregunta
     {
+        // esta es la cadena de texto para las preguntas
         public string enunciadoDeLaPregunta;
+
+        // arreglo de la respuesta
         public Respuesta[] respuestasDeLaPregunta;
         public int respuestaCorrecta;
 
