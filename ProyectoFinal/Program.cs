@@ -14,10 +14,14 @@ namespace ProyectoFinal
         static public void MostrarInstrucciones() // Definimos un public void que guarda lo que debo de hacer al llamar la
                                                   // funcion mostrar instrucciones()
         {
+            Console.WriteLine("\r\n .----------------. \r\n| .--------------. |\r\n| |    ______    | |\r\n| |   / _ __ `.  | |\r\n| |  |_/____) |  | |\r\n| |    /  ___.'  | |\r\n| |    |_|       | |\r\n| |    (_)       | |\r\n| |              | |\r\n| '--------------' |\r\n '----------------' \r\n");
             Console.WriteLine("Instrucciones del juego");
-            Console.WriteLine("El juego empieza con 3 puntos de vida. Al empezar, se mostrará una operación matemática.");
-            Console.WriteLine("Tendrás una cantidad limitada de tiempo para responder la pregunta. Después de cada 2 aciertos, el tiempo se reducirá.");
-            Console.WriteLine("Después de acertar 10 preguntas, la dificultad incrementará y el tiempo máximo se reiniciará.");
+            Console.WriteLine("El juego empieza con 3 puntos de vida. Al empezar, se mostrará una pregunta matemática.");
+            Console.WriteLine("Deberás responder el número que contiene la respuesta correcta. Si aciertas la pregunta, sumarás un punto.");
+            Console.WriteLine("Después de acertar 10 preguntas, la dificultad incrementará.");
+            Console.WriteLine("El juego tiene un máximo de 50 preguntas. Despúes de 50 preguntas o si el jugador se queda sin vidas, el juego terminará.");
+            Console.WriteLine("Intenta obtener una puntuación perfecta!");
+            Console.WriteLine("Los signos que verás son:\r\n x = multiplicación \r\n ÷ = división \r\n + = suma \r\n - = resta \r\n ^ = exponente (elevado a) \r\n ! = factorial (todos los números del 1 hasta ese número multiplicados). Ej: 3! = 1 x 2 x 3"); 
             Console.WriteLine("Presiona ENTER para volver al menú principal");
             Console.ReadLine();
 
@@ -66,12 +70,13 @@ namespace ProyectoFinal
 
             for (int b = 0; b < limite; b++) // esto nos repite el proceso de juego hasta el número definido por el límite
             {
-                Console.WriteLine("Vidas actuales {0}", juegoActual.vidasActuales);
-                Console.WriteLine("Puntaje actual {0}", juegoActual.puntajeActual);
+                Console.WriteLine("   Vidas:  {0}", juegoActual.vidasActuales);
+                Console.WriteLine("   Puntaje:  {0}", juegoActual.puntajeActual);
                 Console.WriteLine(juegoActual.ObtenerPregunta());
                 Console.WriteLine("     0. " + juegoActual.ObtenerRespuestasPosibles(0));
                 Console.WriteLine("     1. " + juegoActual.ObtenerRespuestasPosibles(1));
                 Console.WriteLine("     2. " + juegoActual.ObtenerRespuestasPosibles(2));
+                Console.WriteLine("     3. " + juegoActual.ObtenerRespuestasPosibles(3));
 
                 respuestaDelJugador = CapturarNumero();
 
@@ -83,7 +88,7 @@ namespace ProyectoFinal
                     juegoActual.AciertaPregunta();
                     juegoActual.ProgresarJuego();
                    
-                     // juegoActual.ProgresarJuego(); // CAMBIAR UNA VEZ TENGA NUEVA FUNCION Y PUNTUACION
+                     
                     
                     
                   
@@ -105,6 +110,7 @@ namespace ProyectoFinal
                     {
                         juegoActual.PerderJuego();
                         Console.WriteLine("GAME OVER");
+                        Console.WriteLine("Tu puntaje fue: {0}", juegoActual.puntajeActual);
                         Console.ReadLine();
                         break; // rompemos el ciclo for
                     }
