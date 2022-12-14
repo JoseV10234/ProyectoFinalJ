@@ -21,7 +21,7 @@ namespace ProyectoFinal
             Console.WriteLine("Después de acertar 10 preguntas, la dificultad incrementará.");
             Console.WriteLine("El juego tiene un máximo de 50 preguntas. Despúes de 50 preguntas o si el jugador se queda sin vidas, el juego terminará.");
             Console.WriteLine("Intenta obtener una puntuación perfecta!");
-            Console.WriteLine("Los signos que verás son:\r\n x = multiplicación \r\n ÷ = división \r\n + = suma \r\n - = resta \r\n ^ = exponente (elevado a) \r\n ! = factorial (todos los números del 1 hasta ese número multiplicados). Ej: 3! = 1 x 2 x 3"); 
+            Console.WriteLine("Los signos que verás son:\r\n x = multiplicación \r\n ÷ = división \r\n + = suma \r\n - = resta \r\n ^ = exponente (elevado a) \r\n ! = factorial (todos los números del 1 hasta ese número multiplicados). Ej: 3! = 1 x 2 x 3 \r\n ∛ = raíz cúbica"); 
             Console.WriteLine("Presiona ENTER para volver al menú principal");
             Console.ReadLine();
 
