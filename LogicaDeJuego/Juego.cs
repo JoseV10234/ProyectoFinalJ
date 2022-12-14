@@ -837,7 +837,18 @@ namespace LogicaDeJuego
 
                 }
             }
-           
+
+            if (nivelDeDificultad == 3 && puntajeActual == 40)
+            {
+                nivelDeDificultad += 1;
+                if (vidasActuales < 3)
+                {
+                    vidasActuales += 1;
+                    Console.WriteLine("Vida extra!");
+
+                }
+            }
+
             numeroDePregunta = rng.Next(0, 21); 
         }
 
@@ -1065,7 +1076,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[1].preguntas[0].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "51";
             bancoDePreguntas[1].preguntas[0].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "52";
 
-            bancoDePreguntas[1].preguntas[1].enunciadoDeLaPregunta = "        ∛8 = ";
+            bancoDePreguntas[1].preguntas[1].enunciadoDeLaPregunta = "        Raíz cúbica de 8 = ";
             bancoDePreguntas[1].preguntas[1].respuestaCorrecta = 1;
             bancoDePreguntas[1].preguntas[1].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "-2";
             bancoDePreguntas[1].preguntas[1].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "2";
@@ -1073,7 +1084,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[1].preguntas[1].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "2,55";
 
             bancoDePreguntas[1].preguntas[2].enunciadoDeLaPregunta = "        -5 x -13 = ";
-            bancoDePreguntas[1].preguntas[2].respuestaCorrecta = 1;
+            bancoDePreguntas[1].preguntas[2].respuestaCorrecta = 3;
             bancoDePreguntas[1].preguntas[2].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "65";
             bancoDePreguntas[1].preguntas[2].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "55";
             bancoDePreguntas[1].preguntas[2].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "-55";
@@ -1287,7 +1298,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[2].preguntas[10].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "9";
             bancoDePreguntas[2].preguntas[10].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "10";
 
-            bancoDePreguntas[2].preguntas[11].enunciadoDeLaPregunta = "        ∛216= ";
+            bancoDePreguntas[2].preguntas[11].enunciadoDeLaPregunta = "       Raíz cúbica de 216= ";
             bancoDePreguntas[2].preguntas[11].respuestaCorrecta = 1;
             bancoDePreguntas[2].preguntas[11].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "5.4";
             bancoDePreguntas[2].preguntas[11].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "6";
@@ -1487,7 +1498,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[3].preguntas[17].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "30";
 
             bancoDePreguntas[3].preguntas[18].enunciadoDeLaPregunta = "        Un producto de $15000 tiene un 37% de descuento. Su precio final es: ";
-            bancoDePreguntas[3].preguntas[18].respuestaCorrecta = 2;
+            bancoDePreguntas[3].preguntas[18].respuestaCorrecta = 1;
             bancoDePreguntas[3].preguntas[18].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "10150";
             bancoDePreguntas[3].preguntas[18].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "9450";
             bancoDePreguntas[3].preguntas[18].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "9150";
@@ -1650,7 +1661,7 @@ namespace LogicaDeJuego
             bancoDePreguntas[4].preguntas[19].respuestasDeLaPregunta[2].EnunciadoDeLaRespuesta = "-90";
             bancoDePreguntas[4].preguntas[19].respuestasDeLaPregunta[3].EnunciadoDeLaRespuesta = "45";
 
-            bancoDePreguntas[4].preguntas[20].enunciadoDeLaPregunta = "        ∛-27  =";
+            bancoDePreguntas[4].preguntas[20].enunciadoDeLaPregunta = "        Raíz cúbica de -27  =";
             bancoDePreguntas[4].preguntas[20].respuestaCorrecta = 3;
             bancoDePreguntas[4].preguntas[20].respuestasDeLaPregunta[0].EnunciadoDeLaRespuesta = "4.5";
             bancoDePreguntas[4].preguntas[20].respuestasDeLaPregunta[1].EnunciadoDeLaRespuesta = "-9";
